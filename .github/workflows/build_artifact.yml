@@ -1,11 +1,9 @@
 name: Compile LaTeX Document and Push PDF
 
 on:
-  push:
+  pull_request:
     branches:
       - main # or any branch you want to trigger the workflow
-    paths-ignore:
-      - "bylaws.pdf" # Prevent workflow loop on PDF changes
 
 permissions:
   contents: write
